@@ -2,7 +2,7 @@
   "name": "countapp",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://count-pwa.github.io/",
+  "homepage": "https://main-uddin.github.io/count-pwa/",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
