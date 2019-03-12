@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { useState, memo } from 'react'
+import './App.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>count: <p>0</p> </h1>
-      </div>
-    );
-  }
+function App(props) {
+  const [count, setCount] = useState(0)
+
+  const change = val => e => setCount(count + val)
+
+  return (
+    <div className="App">
+      <h1>
+        count <p>{count}</p>
+      </h1>
+      <button onClick={change(1)}>Increment</button>
+      <button onClick={change(-1)}>Decrement</button>
+    </div>
+  )
 }
 
-export default App;
+export default memo(App)
